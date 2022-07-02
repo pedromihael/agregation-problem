@@ -5,14 +5,14 @@ import {
 } from './Bank2AccountTransaction';
 
 export class Bank2AccountSource {
-  public getBalance(accountNum: number) {
+  public getBalance(accountNum?: number) {
     return new Bank2AccountBalance(512.5, 'USD');
   }
 
   public getTransactions(
-    accountNum: number,
-    fromDate: Date,
-    toDate: Date,
+    accountNum?: number,
+    fromDate?: Date,
+    toDate?: Date,
   ): Array<Bank2AccountTransaction> {
     const tValues = [
       { amount: 125, type: TRANSACTION_TYPES.DEBIT, text: 'Amazon.com' },
