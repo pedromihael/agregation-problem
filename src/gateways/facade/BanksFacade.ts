@@ -19,11 +19,26 @@ export class BanksFacade implements IBankServiceAdapter {
     ];
   }
 
-  getBalance(): number {
-    return this.bank1Adapter.getBalance() + this.bank2Adapter.getBalance();
+  getBalance(): any {
+    const sortedCurrencies = this.getCurrency();
+
+    if (sortedCurrencies.length === 1) {
+      return {
+        amount: this.bank1Adapter.getBalance() + this.bank2Adapter.getBalance(),
+        currency: sortedCurrencies[0],
+      };
+    }
+
+    const sortedAdapters = [this.bank1Adapter, this.bank2Adapter];
+
+    const balance = sortedCurrencies.map((c: string, index: number) => {
+      return { amount: sortedAdapters[index].getBalance(), currency: c };
+    });
+
+    return balance;
   }
 
-  getCurrency(): string | Array<string> {
+  getCurrency(): Array<string> {
     const currency1 = this.bank1Adapter.getCurrency();
     const currency2 = this.bank2Adapter.getCurrency();
 

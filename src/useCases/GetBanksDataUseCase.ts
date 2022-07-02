@@ -18,7 +18,7 @@ export class GetBanksDataUseCase {
 
     return {
       balance: accountBalance,
-      currency: accountCurrency,
+      currencies: accountCurrency,
       transactions: accountTransactions,
     };
   }
