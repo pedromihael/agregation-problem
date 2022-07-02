@@ -24,6 +24,7 @@ export class Bank1Adapter implements IBankServiceAdapter {
         amount: t.getAmount(),
         text: t.getText(),
         type: t.getType(),
+        bank: 'bank1',
       };
     });
 

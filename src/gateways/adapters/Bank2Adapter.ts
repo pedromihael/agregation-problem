@@ -33,6 +33,7 @@ export class Bank2Adapter implements IBankServiceAdapter {
         amount: t.getAmount(),
         text: t.getText(),
         type: enumMapping[t.getType()],
+        bank: 'bank2',
       };
     });
 
