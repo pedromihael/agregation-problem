@@ -1,5 +1,5 @@
-import { TransactionType } from '~/entities/TransactionType';
-import { Transaction } from '../../entities/Transaction';
+import { TransactionType } from '../../entities/types/TransactionType';
+import { Transaction } from '../../entities/types/Transaction';
 import { Bank2AccountSource } from '../../services/bank2/integration/Bank2AccountSource';
 import { TRANSACTION_TYPES } from '../../services/bank2/integration/Bank2AccountTransaction';
 import { IBankServiceAdapter } from './IBankServiceAdapter';

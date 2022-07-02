@@ -1,4 +1,4 @@
-import { Transaction } from '~/entities/Transaction';
+import { Transaction } from '../../entities/types/Transaction';
 import { Bank1Adapter } from '../adapters/Bank1Adapter';
 import { Bank2Adapter } from '../adapters/Bank2Adapter';
 import { IBankServiceAdapter } from '../adapters/IBankServiceAdapter';

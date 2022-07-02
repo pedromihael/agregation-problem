@@ -1,4 +1,4 @@
-export enum TRANSACTION_TYPES {
+export const enum TRANSACTION_TYPES {
   DEBIT,
   CREDIT,
 }

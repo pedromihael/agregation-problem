@@ -1,4 +1,4 @@
-import { Transaction } from '../../entities/Transaction';
+import { Transaction } from '../../entities/types/Transaction';
 
 export interface IBankServiceAdapter {
   getTransactions(): Array<Transaction>;
